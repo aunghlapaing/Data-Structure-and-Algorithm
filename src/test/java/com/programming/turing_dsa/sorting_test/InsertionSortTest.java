@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import com.turing.dsa.util.Util;
 
-public class SelectionSortTest {
+public class InsertionSortTest {
 	Util util = new Util();
-	SortingAlgorithm sortingAlgo = new SelectionSort();
+	SortingAlgorithm sortingAlgo = new InsertionSort();
 	
 	@Test
 	public void testSimpleCase()
@@ -44,6 +44,4 @@ public class SelectionSortTest {
 		assertTrue(util.isArraySorted(arr));
 		
 	}
-
-	
 }

@@ -10,13 +10,13 @@ import com.turing.dsa.util.Util;
 
 public class BubbleSortTest {
 	Util util = new Util();
-	SortingAlgorithm bubbleSort = new BubbleSort();
+	SortingAlgorithm sortingAlgo = new BubbleSort();
 	
 	@Test
 	public void testBubbleSimpleCase()
 	{
 		int arr[] = {3, 2};
-		bubbleSort.sortingAlgo(arr);
+		sortingAlgo.sort(arr);
 		assertTrue(util.isArraySorted(arr));		
 	}
 	
@@ -24,7 +24,7 @@ public class BubbleSortTest {
 	public void testBubbleSortMutipleCase()
 	{
 		int arr[] = {3, 4, 5, 1, 6};
-		bubbleSort.sortingAlgo(arr);
+		sortingAlgo.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 	
@@ -32,7 +32,7 @@ public class BubbleSortTest {
 	public void testBubbleSortEmptyCase()
 	{
 		int arr[] = {};
-		bubbleSort.sortingAlgo(arr);
+		sortingAlgo.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 	}
 	
@@ -40,7 +40,7 @@ public class BubbleSortTest {
 	public void testBubbleSortRandomCase()
 	{
 		int[] arr = util.createRandomArray(20);
-		bubbleSort.sortingAlgo(arr);
+		sortingAlgo.sort(arr);
 		assertTrue(util.isArraySorted(arr));
 		
 	}

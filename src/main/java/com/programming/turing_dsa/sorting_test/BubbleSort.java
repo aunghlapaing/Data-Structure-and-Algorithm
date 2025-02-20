@@ -3,7 +3,7 @@ package com.programming.turing_dsa.sorting_test;
 public class BubbleSort implements SortingAlgorithm {
 
 	@Override
-	public void sortingAlgo(int[] arr) {
+	public void sort(int[] arr) {
 		for (int i = 0; i < arr.length; i++)
 		{
 			for (int j = 0; j < arr.length-1-i; j++)

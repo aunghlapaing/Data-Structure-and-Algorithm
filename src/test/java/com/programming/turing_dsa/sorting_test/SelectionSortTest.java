@@ -41,9 +41,7 @@ public class SelectionSortTest {
 	{
 		int[] arr = util.createRandomArray(20);
 		sortingAlgo.sort(arr);
-		assertTrue(util.isArraySorted(arr));
-		
+		assertTrue(util.isArraySorted(arr));	
 	}
-
 	
 }

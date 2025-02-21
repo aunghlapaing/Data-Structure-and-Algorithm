@@ -13,7 +13,7 @@ public class BubbleSortTest {
 	SortingAlgorithm sortingAlgo = new BubbleSort();
 	
 	@Test
-	public void testBubbleSimpleCase()
+	public void testSimpleCase()
 	{
 		int arr[] = {3, 2};
 		sortingAlgo.sort(arr);
@@ -21,7 +21,7 @@ public class BubbleSortTest {
 	}
 	
 	@Test
-	public void testBubbleSortMutipleCase()
+	public void testSortMutipleCase()
 	{
 		int arr[] = {3, 4, 5, 1, 6};
 		sortingAlgo.sort(arr);
@@ -29,7 +29,7 @@ public class BubbleSortTest {
 	}
 	
 	@Test
-	public void testBubbleSortEmptyCase()
+	public void testSortEmptyCase()
 	{
 		int arr[] = {};
 		sortingAlgo.sort(arr);
@@ -37,13 +37,10 @@ public class BubbleSortTest {
 	}
 	
 	@Test
-	public void testBubbleSortRandomCase()
+	public void testSortRandomCase()
 	{
 		int[] arr = util.createRandomArray(20);
 		sortingAlgo.sort(arr);
-		assertTrue(util.isArraySorted(arr));
-		
+		assertTrue(util.isArraySorted(arr));		
 	}
-
-	
 }

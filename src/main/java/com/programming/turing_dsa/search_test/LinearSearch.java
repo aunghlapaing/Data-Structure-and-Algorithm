@@ -11,7 +11,7 @@ public class LinearSearch implements SearchingAlgorithm{
 				return i;
 			}
 		}
-		return -1;
+		return -1; //if item not found
 	}
 	
 }

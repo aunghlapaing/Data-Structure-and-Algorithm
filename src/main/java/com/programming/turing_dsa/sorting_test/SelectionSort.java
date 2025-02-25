@@ -13,9 +13,9 @@ public class SelectionSort implements SortingAlgorithm{
 				{
 					arr[j] = arr [minIndex];
 				}
-				int temp = arr [minIndex]; 
-				arr [minIndex] = arr [i]; 
-				arr [i + 1] = temp;
+				int temp = arr [minIndex]; // minIndex = i + 1
+				arr [minIndex] = arr [i]; // i = 0
+				arr [i] = temp; // 1
 			}
 		}
 		

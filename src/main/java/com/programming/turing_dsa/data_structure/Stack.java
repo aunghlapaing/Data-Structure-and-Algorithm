@@ -23,7 +23,7 @@ public class Stack {
 	}
 
 	public int pop(int item) {
-		return this.arr[this.top--] = item;
+		return this.arr[this.top--];
 	}
 	
 	public boolean isEmpty()

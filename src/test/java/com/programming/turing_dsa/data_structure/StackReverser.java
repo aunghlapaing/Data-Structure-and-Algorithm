@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class StackReveser {
+public class StackReverser {
 	Reverser reverser = new Reverser();
 	
 	@Test
@@ -29,6 +29,8 @@ public class StackReveser {
 		
 		output = reverser.reverse("programmer");
 		assertEquals("remmargorp", output);
+		
+		System.out.println("Reverse word of the programmer is " + output);
 	}
 	
 }

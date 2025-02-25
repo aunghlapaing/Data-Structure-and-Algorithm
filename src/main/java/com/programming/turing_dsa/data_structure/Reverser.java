@@ -12,7 +12,7 @@ public class Reverser {
 		String result = "";
 		while (!stack.isEmpty())
 		{
-			result +=stack.pop();
+			result += stack.pop();
 		}
 		return result;
 	}

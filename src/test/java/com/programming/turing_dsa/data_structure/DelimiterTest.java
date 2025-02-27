@@ -1,39 +1,25 @@
 package com.programming.turing_dsa.data_structure;
 
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 
 public class DelimiterTest {
 	DelimiterPratice delimiter = new DelimiterPratice();
-	
-	@Test
-	public void testEmptyCase()
-	{
-		boolean valid = delimiter.isValid("");
-		
-		assertTrue(valid);
+	@ParameterizedTest
+	@CsvSource({
+			"'', True", 
+			"a[b], True",
+			"a{b, False",
+			"a{b}c], False",
+			})
+	public void testDelimiter(String input, boolean expected) {
+		System.out.println("Input:" + input + " and" + "Output:" + expected);
+	    boolean valid = delimiter.isValid(input);
+	    assertEquals(expected, valid);
 	}
-	
-	@Test
-	public void testSingleInput() 
-	{
-		boolean valid = delimiter.isValid("a[b]");
-		
-		assertTrue(valid);
-	}
-	
-	@Test
-	public void testNegativeCase()
-	{
-		assertFalse(delimiter.isValid("a{b"));
-	}
-	@Test
-	public void testMultipleNegativeCase()
-	{
-		assertFalse(delimiter.isValid("a{b}c]"));
-	}
+
 }

@@ -2,18 +2,22 @@ package com.programming.turing_dsa.data_structure;
 
 import java.util.ArrayList;
 import java.util.Stack;
-public class DelimiterPratice {
-	
 
-	public boolean isValid(String input) {
-		ArrayList<Character> startTags = new ArrayList<> ();
+public class DelimiterPratice {
+	ArrayList<Character> startTags = new ArrayList<> ();
+	ArrayList<Character> endTags = new ArrayList<> ();
+	
+	public DelimiterPratice ()
+	{
 		startTags.add('[');
 		startTags.add('{');
 		
-		ArrayList<Character> endTags = new ArrayList<> ();
 		endTags.add(']');
 		endTags.add('}');
-		
+	}
+	
+
+	public boolean isValid(String input) {
 		
 		Stack<Character> stack = new Stack<> ();
 		

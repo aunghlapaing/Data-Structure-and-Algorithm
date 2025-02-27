@@ -29,4 +29,11 @@ public class LinearSearchTest {
 		int index = searchAlgo.search(arr, 7);
 		assertEquals(-1,index);
 	}
+	@Test
+	public void DuplicateCase()
+	{
+		int arr[] = {1, 2, 3, 3, 4, 5};
+		int index = searchAlgo.search(arr, 3);
+		assertEquals(3,index);
+	}
 }

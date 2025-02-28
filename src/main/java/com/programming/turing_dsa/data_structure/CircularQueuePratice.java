@@ -12,9 +12,14 @@ public class CircularQueuePratice extends QueuePratice{
 		return this.size;
 	}
 	
+	boolean isFull()
+	{
+		return this.size == arr.length;
+	}
+	
 	public void enqueue(int item)
 	{
-		if (this.size != this.arr.length)
+		if (!this.isFull())
 		{
 			this.tail = this.tail % this.arr.length; //circular enqueue
 			this.arr[this.tail++] = item;
@@ -27,10 +32,13 @@ public class CircularQueuePratice extends QueuePratice{
 		
 		
  	}
-	
+	boolean isEmpty()
+	{
+		return this.size == 0;
+	}
 	public int dequeue()
 	{
-		if (this.size > 0)
+		if (!this.isEmpty())
 		{
 			this.head = this.head % this.arr.length;
 			this.size --;

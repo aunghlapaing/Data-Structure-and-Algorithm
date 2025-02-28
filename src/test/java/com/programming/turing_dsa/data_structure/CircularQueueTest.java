@@ -5,8 +5,8 @@ import static org.junit.Assert.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class QueueTest {
-	QueuePratice queue = new QueuePratice();
+public class CircularQueueTest {
+	QueuePratice queue = new CircularQueuePratice();
 	
 	@Test
 	public void testEnqueue()
@@ -38,12 +38,29 @@ public class QueueTest {
 		
 		int element = queue.dequeue();
 		element = queue.dequeue();
-		
 		assertEquals(20, element);
 		
 		int size = queue.size();
 		assertEquals(0, size);
 	}
+	
+	@Test 
+	public void testEnqueueCircularCase()
+	{
+		queue.enqueue(10);
+		queue.enqueue(20);
+		assertEquals(10, queue.peek());
+		
+		int element = queue.dequeue();
+		element = queue.dequeue();
+		assertEquals(20, element);
+		
+		queue.enqueue(30);
+		
+		int size = queue.size();
+		assertEquals(1, size);
+	}
+
 	
 	@Test
 	public void testBoundaryCase()
@@ -62,7 +79,7 @@ public class QueueTest {
 	}
 	
 	@Test
-	public void testOutOfBoundDequeueCase()
+	public void testCircularOutOfBoundDequeueCase()
 	{
 		queue.enqueue(10);
 		queue.enqueue(20);
@@ -74,7 +91,7 @@ public class QueueTest {
 		RuntimeException error = assertThrows (RuntimeException.class, ()->{
 			queue.dequeue();
 		});
-		assertEquals("Queue is empty", error.getMessage());
+		assertEquals("Circular Queue is empty", error.getMessage());
 		
 		assertEquals(10, element);
 		
@@ -83,7 +100,7 @@ public class QueueTest {
 	}
 	
 	@Test
-	public void TestEnqueueOutOfBoundCase()
+	public void TestCircularEnqueueOutOfBoundCase()
 	{
 		queue.enqueue(10);
 		queue.enqueue(20);
@@ -97,7 +114,7 @@ public class QueueTest {
 		RuntimeException error = assertThrows (RuntimeException.class, ()->{
 			queue.enqueue(60);
 		});
-		assertEquals("Queue is full", error.getMessage());
+		assertEquals("Circular Queue is full", error.getMessage());
 		
 		int size = queue.size();
 		assertEquals(5, size);

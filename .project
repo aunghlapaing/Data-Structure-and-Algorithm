@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>turing_dsa</name>
+=======
+	<name>learning</name>
+>>>>>>> 26d3d0a (add updated algo && data structure)
 	<comment></comment>
 	<projects>
 	</projects>

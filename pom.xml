@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 
-=======
->>>>>>> 26d3d0a (add updated algo && data structure)
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-<<<<<<< HEAD
-  <groupId>com.programming</groupId>
-  <artifactId>turing.dsa</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-
-  <name>turing.dsa</name>
-  <description>A simple turing.dsa.</description>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
-=======
+  
   <groupId>com.dsa</groupId>
   <artifactId>learning</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -32,7 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
->>>>>>> 26d3d0a (add updated algo && data structure)
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -40,7 +23,6 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
-<<<<<<< HEAD
     </dependency>
     
     <dependency>
@@ -115,14 +97,4 @@
       </plugin>
     </plugins>
   </reporting>
-=======
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>com.programming</groupId>
-    	<artifactId>turing.dsa</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
->>>>>>> 26d3d0a (add updated algo && data structure)
 </project>

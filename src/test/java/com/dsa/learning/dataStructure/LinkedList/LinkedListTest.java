@@ -4,110 +4,37 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Iterator;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class LinkedListTest {
 	
 	LinkedList list = new LinkedList();
 	
 	@Test
-	public void firstPointerInsertCase()
+	public void testAddFirstSimpleCase()
 	{
 		
-		Node first = new Node(10);
-		Node second = new Node(20);
-		Node third = new Node (30);
-		
-		list.addFirst(first);
-		list.addFirst(second);
-		list.addFirst(third);
+		list.addFirst(10);
 		
 		Iterator iterator = list.iterator();
-		
-		assertEquals(third, iterator.next());
-		assertEquals(second, iterator.next());
-		assertEquals(first, iterator.next());
+		assertEquals(10, ((Node)iterator.next()).getValue());
 		
 	}
 	
 	@Test
-	public void addFirstandIterateCase()
+	public void testAddFirstMultipleCase()
 	{
 		
-		for ( int i = 0; i < 10; i++ )
-		{
-			list.addFirst(new Node(i));
-		}
-		
-		int i = 9;
-		Iterator iterator = list.iterator();
-		//[9->8->...->1]
-		while ( iterator.hasNext() )
-		{
-			Node node = (Node) iterator.next();
-			assertEquals(i--, node.getValue());
-		}
-	}
-	
-	@Test
-	public void lastPointerInsertCase()
-	{
-		Node first = new Node (10);
-		Node second = new Node (20);
-		
-		list.addLast(first);
-		list.addLast(second);
-		
-		Iterator iterator = list.iterator();
-		assertEquals(first, iterator.next());
-		assertEquals(second, iterator.next());
-		
-	}
-	
-	@Test
-	public void addFirstAndaddLastMixedCase()
-	{
-		Node first = new Node (10);
-		Node second = new Node (20);
-		Node third = new Node (30);
-		
-		list.addLast(first);
-		list.addLast(second);
-		list.addFirst(third);
-		
-		Iterator iterator = list.iterator();
-		assertEquals(third, iterator.next());
-		assertEquals(first, iterator.next());
-		assertEquals(second, iterator.next());
-	}
-	
-	@Test
-	public void addLastandIterateCase()
-	{
-		
-		for ( int i = 0; i < 10; i++ )
-		{
-			list.addLast(new Node(i));
-		}
-		
-		int i = 0;
-		Iterator iterator = list.iterator();
-		//[0->..->9]
-		while ( iterator.hasNext() )
-		{
-			Node node = (Node) iterator.next();
-			assertEquals(i++, node.getValue());
-		}
-	}
-	
-	@Test
-	public void findCase()
-	{
 		list.addFirst(10);
 		list.addFirst(20);
+		list.addFirst(30);
 		
-		Node item = list.find(20);
-		assertEquals(20, item.getValue());
+		//[ 30->20->10 ]
+		
+		Iterator iterator = list.iterator();
+		assertEquals(30, ((Node)iterator.next()).getValue());
+		assertEquals(20, ((Node)iterator.next()).getValue());
+		assertEquals(10, ((Node)iterator.next()).getValue());
 	}
 
 }

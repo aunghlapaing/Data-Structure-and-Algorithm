@@ -4,20 +4,18 @@ public class Node {
 	int value;
 	Node next;
 	
-	public Node(int value)
+	public Node(int item)
 	{
-		this.value = value;
+		this.value = item;
 	}
 	
-	public void setNext(Node node)
+	public Node setNext(Node node)
 	{
-		this.next = node;
+		return this.next = node;
 	}
 	
 	public int getValue()
 	{
 		return this.value;
 	}
-	
-
 }

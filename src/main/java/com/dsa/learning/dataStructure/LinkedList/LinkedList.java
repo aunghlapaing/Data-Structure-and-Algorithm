@@ -25,9 +25,10 @@ public class LinkedList implements Iterable {
 	
 	public void addFirst(Node node) 
 	{
-		if ( first == null ) // Empty List 
+		if ( this.first == null && this.last == null ) // Empty List 
 		{
 			this.first = node;
+			this.last = node;
 		}
 		else // List is not empty
 		{
@@ -35,6 +36,38 @@ public class LinkedList implements Iterable {
 			this.first = node;
 		}
 		
+	}
+	
+	public Node getFirst() //return first node for the test case
+	{
+		return this.first ;
+	}
+	
+	public void addLast(int i) 
+	{
+		Node node = new Node(i);
+		this.addLast(node);
+		
+	}
+	
+	public void addLast(Node node)
+	{
+		if ( this.last == null && this.first == null )
+		{
+			this.last = node;
+			this.first = node;
+			System.out.println("First node:" + first.getValue());
+		}
+		else
+		{
+			last.setNext(node);
+			this.last = node;
+		}
+	}
+	
+	public Node getLast() // return last node for test case 
+	{
+		return this.last;
 	}
 
 	@Override
@@ -65,6 +98,44 @@ public class LinkedList implements Iterable {
 				current = current.next;
 			}
 			return temp;
+		}
+	}
+
+	public int search(int item) 
+	{
+		Node current = first;
+		while ( current != null )
+		{
+			if ( current.getValue() == item )
+			{
+				return current.getValue();
+			}
+			current = current.next;
+		}
+		
+		return -1;
+	}
+
+	public void deleteNode(int item) 
+	{
+		Node current = this.first;
+		if ( current.getValue() == item ) //single node
+		{
+			this.first = null;
+		}
+		else if ( current.next != null ) // middle node && last node
+		{
+			Node previous = null;
+			Node deleteNode = null;
+			while ( current.getValue() != item )
+			{
+				previous = current;
+				current = current.next;
+			}
+			deleteNode = current;
+			System.out.println("Node to delete:" + deleteNode.getValue());
+			previous.next = deleteNode.next;
+			
 		}
 	}
 

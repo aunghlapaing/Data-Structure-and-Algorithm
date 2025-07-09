@@ -116,27 +116,38 @@ public class LinkedList implements Iterable {
 		return -1;
 	}
 
-	public void deleteNode(int item) 
+	public Node deleteNode(int item) 
 	{
-		Node current = this.first;
-		if ( current.getValue() == item ) //single node
+		Node current = first;
+		Node previous = null;
+		Node deleteNode = null;
+		while ( current != null )
 		{
-			this.first = null;
-		}
-		else if ( current.next != null ) // middle node && last node
-		{
-			Node previous = null;
-			Node deleteNode = null;
-			while ( current.getValue() != item )
+			if ( current.value == item ) // delete node found
 			{
-				previous = current;
-				current = current.next;
+				deleteNode = current; 
+				//single node
+				if ( this.first == this.last )
+				{
+					first = deleteNode.next;
+					return deleteNode;
+				}
+				//multiple node && last node
+				else if ( previous != null )
+				{
+					previous.next = deleteNode.next;
+					if ( deleteNode.next == null )
+					{
+						this.last = previous;
+					}
+					return deleteNode;
+				}
+				
 			}
-			deleteNode = current;
-			System.out.println("Node to delete:" + deleteNode.getValue());
-			previous.next = deleteNode.next;
-			
+			previous = current;
+			current = current.next;
 		}
+		return null;
 	}
 
 }

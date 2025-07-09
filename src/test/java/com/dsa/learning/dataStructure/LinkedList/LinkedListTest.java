@@ -147,10 +147,27 @@ public class LinkedListTest {
 	{
 		list.addFirst(10);
 		
-		list.deleteNode(10);
+		assertEquals(10, ((Node)list.deleteNode(10)).getValue());
+	}
+	
+	@Test
+	public void testDeleteFirstMultipleNodeCase()
+	{
+		list.addFirst(10);
+		list.addFirst(50);
+		list.addFirst(40);
+		list.addFirst(40);
+		
+		// [ 40->40->50->10 ]
+		
+		assertEquals(10, ((Node)list.deleteNode(10)).getValue());
+		assertEquals(50, ((Node)list.deleteNode(50)).getValue());
+		assertEquals(40, ((Node)list.deleteNode(40)).getValue());
 		
 		Iterator iterator = list.iterator();
-		assertEquals(null, iterator.next());
+		
+		assertEquals(40 , ((Node)iterator.next()).getValue());
+		assertEquals(40, ((Node)list.getFirst()).getValue());
 	}
 	
 	@Test
@@ -161,8 +178,8 @@ public class LinkedListTest {
 		list.addFirst(30);
 		
 		// [30->20->10]
-		
-		list.deleteNode(20);
+
+		assertEquals(20, ((Node)list.deleteNode(20)).getValue());
 		
 		// [30->10]
 		
@@ -182,12 +199,48 @@ public class LinkedListTest {
 		
 		// [10->20->30]
 		
-		list.deleteNode(30);
+		assertEquals(30, ((Node)list.deleteNode(30)).getValue());
 		
 		Iterator iterator = list.iterator();
 		
 		assertEquals(10, ((Node)iterator.next()).getValue());
 		assertEquals(20, ((Node)iterator.next()).getValue());
+		assertEquals(20, ((Node)list.getLast()).getValue());
+		assertFalse(iterator.hasNext());
+	}
+	
+	@Test
+	public void testDeleteOutofBoundCase()
+	{
+		list.addLast(10);
+		
+		Node node = list.deleteNode(20);
+		
+		assertEquals(null, node);	
+		
+		Iterator iterator = list.iterator();
+		assertEquals(10, ((Node)iterator.next()).getValue());
+		assertFalse(iterator.hasNext());
+	}
+	
+	@Test
+	public void testDeleteLastNodeOutOfBoundCase()
+	{
+		list.addLast(10);
+		list.addLast(20);
+		list.addLast(30);
+		
+		// [10->20->30]
+		
+		Node node = list.deleteNode(40);
+		
+		assertEquals(null, node);
+		
+		Iterator iterator = list.iterator();
+		
+		assertEquals(10, ((Node)iterator.next()).getValue());
+		assertEquals(20, ((Node)iterator.next()).getValue());
+		assertEquals(30, ((Node)iterator.next()).getValue());
 		assertFalse(iterator.hasNext());
 	}
 	

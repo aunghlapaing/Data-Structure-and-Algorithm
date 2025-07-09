@@ -3,10 +3,10 @@ package com.dsa.learning.dataStructure.LinkedList;
 import java.util.Iterator;
 
 public class LinkedList implements Iterable {
-	Node first;
-	Node last;
+	protected Node first;
+	protected Node last;
 	
-	LinkedList()
+	protected LinkedList()
 	{
 		
 	}
@@ -17,13 +17,13 @@ public class LinkedList implements Iterable {
 		this.last = firstNode;
 	}
 	
-	public void addFirst(int item)
+	protected void addFirst(int item)
 	{
 		Node node = new Node(item);
 		this.addFirst(node);
 	}
 	
-	public void addFirst(Node node) 
+	protected void addFirst(Node node) 
 	{
 		if ( this.first == null && this.last == null ) // Empty List 
 		{
@@ -43,20 +43,20 @@ public class LinkedList implements Iterable {
 		return this.first ;
 	}
 	
-	public void addLast(int i) 
+	protected void addLast(int i) 
 	{
 		Node node = new Node(i);
 		this.addLast(node);
 		
 	}
 	
-	public void addLast(Node node)
+	protected void addLast(Node node)
 	{
 		if ( this.last == null && this.first == null )
 		{
 			this.last = node;
 			this.first = node;
-			System.out.println("First node:" + first.getValue());
+			// System.out.println("First node:" + first.getValue());
 		}
 		else
 		{
@@ -65,7 +65,7 @@ public class LinkedList implements Iterable {
 		}
 	}
 	
-	public Node getLast() // return last node for test case 
+	protected Node getLast() // return last node for test case 
 	{
 		return this.last;
 	}

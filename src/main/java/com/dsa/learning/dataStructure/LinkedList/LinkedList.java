@@ -38,7 +38,7 @@ public class LinkedList implements Iterable {
 		
 	}
 	
-	public Node getFirst() //return first node for the test case
+	protected Node getFirst() //return first node for the test case
 	{
 		return this.first ;
 	}
@@ -127,7 +127,7 @@ public class LinkedList implements Iterable {
 			{
 				deleteNode = current; 
 				//single node
-				if ( this.first == this.last )
+				if ( this.first == current)
 				{
 					first = deleteNode.next;
 					return deleteNode;

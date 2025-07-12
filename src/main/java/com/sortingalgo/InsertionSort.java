@@ -4,32 +4,17 @@ import com.sortingalgo.Util;
 
 public class InsertionSort implements SortingAlgo {
 
-//	public void sort(int[] arr) {
-//		for ( int i = 1; i < arr.length; i++ )
-//		{
-//			int j = i;
-//			while ( j > 0 && arr[j] < arr[j-1] )
-//			{
-//				int temp = arr [j];
-//				arr[j] = arr[j-1];
-//				arr [j-1] = temp;
-//				j--;
-//			}	
-//		}
-//	}
-	
 	public void sort(int[] arr) {
-		for ( int i = 1; i < arr.length; i++ )
+		for ( int i =1 ; i < arr.length; i++ )
 		{
-			for ( int j = i; j > 0; j-- )
+			int j = i;
+			while ( j > 0 && arr[j] < arr[j-1] )
 			{
-				if ( arr[j] < arr[j-1] )
-				{
-					int temp = arr [j];
-					arr[j] = arr[j-1];
-					arr [j-1] = temp;
-				}
-			}
+				int temp = arr [j];
+				arr[j] = arr[j-1];
+				arr [j-1] = temp;
+				j--;
+			}	
 		}
 	}
 	

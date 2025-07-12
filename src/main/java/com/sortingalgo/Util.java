@@ -2,8 +2,6 @@ package com.sortingalgo;
 
 import java.util.Random;
 
-import org.junit.Test;
-
 public class Util {
 	public boolean isSortedArray(int[] arr)
 	{

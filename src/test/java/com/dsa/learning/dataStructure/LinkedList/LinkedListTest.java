@@ -156,9 +156,9 @@ public class LinkedListTest {
 		list.addFirst(10);
 		list.addFirst(50);
 		list.addFirst(40);
-		list.addFirst(40);
+		list.addLast(40);
 		
-		// [ 40->40->50->10 ]
+		// [ 40->50->10->40 ]
 		
 		assertEquals(10, ((Node)list.deleteNode(10)).getValue());
 		assertEquals(50, ((Node)list.deleteNode(50)).getValue());

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.dsa.learning.dataStructure.Stack;
+
 public class StackTest {
 	
 	Stack stack = new Stack(10);

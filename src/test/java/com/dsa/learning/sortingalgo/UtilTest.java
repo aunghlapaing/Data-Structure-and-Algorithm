@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.sortingalgo.Util;
+import com.dsa.learning.sortingalgo.Util;
 
 public class UtilTest {
 	

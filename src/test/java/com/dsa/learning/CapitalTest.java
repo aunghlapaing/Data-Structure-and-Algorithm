@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import com.dsa.learning.Capital;
+
 public class CapitalTest {
 	
 	Capital str = new Capital();

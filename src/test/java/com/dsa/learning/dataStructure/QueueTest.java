@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.Test;
 
+import com.dsa.learning.dataStructure.Queue;
+
 
 public class QueueTest {
 	Queue queue = new Queue();

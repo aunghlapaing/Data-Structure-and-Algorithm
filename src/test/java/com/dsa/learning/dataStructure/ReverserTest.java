@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.dsa.learning.dataStructure.Reverser;
+
 public class ReverserTest {
 	
 	@Test

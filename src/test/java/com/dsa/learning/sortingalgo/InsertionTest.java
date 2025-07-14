@@ -4,9 +4,10 @@ package com.dsa.learning.sorting;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
-import com.sortingalgo.InsertionSort;
-import com.sortingalgo.SortingAlgo;
-import com.sortingalgo.Util;
+
+import com.dsa.learning.sortingalgo.InsertionSort;
+import com.dsa.learning.sortingalgo.SortingAlgo;
+import com.dsa.learning.sortingalgo.Util;
 
 
 public class InsertionTest {

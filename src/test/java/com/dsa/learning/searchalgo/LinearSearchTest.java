@@ -1,8 +1,10 @@
-package com.dsa.learning;
+package com.dsa.learning.searchalgo;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import com.dsa.learning.searchalgo.LinearSearchAlgo;
 
 public class LinearSearchTest {
 	

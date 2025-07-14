@@ -5,6 +5,9 @@ import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 
+import com.dsa.learning.dataStructure.CircularQueue;
+import com.dsa.learning.dataStructure.Queue;
+
 public class CircularQueueTest {
 	Queue queue = new CircularQueue();
 	

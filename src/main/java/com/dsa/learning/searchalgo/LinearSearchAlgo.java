@@ -1,4 +1,4 @@
-package com.dsa.learning;
+package com.dsa.learning.searchalgo;
 
 public class LinearSearchAlgo {
 

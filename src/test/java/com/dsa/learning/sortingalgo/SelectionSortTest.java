@@ -4,9 +4,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.sortingalgo.SelectionSort;
-import com.sortingalgo.SortingAlgo;
-import com.sortingalgo.Util;
+import com.dsa.learning.sortingalgo.SelectionSort;
+import com.dsa.learning.sortingalgo.SortingAlgo;
+import com.dsa.learning.sortingalgo.Util;
 
 public class SelectionSortTest {
 	Util util = new Util();

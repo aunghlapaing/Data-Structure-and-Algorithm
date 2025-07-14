@@ -1,10 +1,10 @@
-package com.sortingalgo;
+package com.dsa.learning.sortingalgo;
 
-import com.sortingalgo.Util;
+import com.dsa.learning.sortingalgo.Util;
 
 public class InsertionSort implements SortingAlgo {
 
-	public void sort(int[] arr) {
+	public int[] sort(int[] arr) {
 		for ( int i =1 ; i < arr.length; i++ )
 		{
 			int j = i;
@@ -16,6 +16,7 @@ public class InsertionSort implements SortingAlgo {
 				j--;
 			}	
 		}
+		return arr;
 	}
 	
 	public static void main(String[] args)

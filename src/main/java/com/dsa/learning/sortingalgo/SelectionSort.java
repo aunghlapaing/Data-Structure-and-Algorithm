@@ -1,8 +1,8 @@
-package com.sortingalgo;
+package com.dsa.learning.sortingalgo;
 
 public class SelectionSort implements SortingAlgo {
 
-	public void sort(int[] arr) {
+	public int[] sort(int[] arr) {
 		for ( int i = 0; i < arr.length - 1; i++ )
 		{
 			int minIndex = i;
@@ -16,9 +16,9 @@ public class SelectionSort implements SortingAlgo {
 			}
 			int temp = arr[i];
 			arr[i] = arr[minIndex];
-			arr[minIndex] = temp;
-			
+			arr[minIndex] = temp;			
 		}
+		return arr;
 	}
 	
 	// Time Complexity => O(n^2)

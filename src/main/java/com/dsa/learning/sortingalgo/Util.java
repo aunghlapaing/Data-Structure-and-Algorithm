@@ -1,4 +1,4 @@
-package com.sortingalgo;
+package com.dsa.learning.sortingalgo;
 
 import java.util.Random;
 

@@ -6,9 +6,9 @@ import java.util.Random;
 
 import org.junit.Test;
 
-import com.sortingalgo.BubbleSort;
-import com.sortingalgo.SortingAlgo;
-import com.sortingalgo.Util;
+import com.dsa.learning.sortingalgo.BubbleSort;
+import com.dsa.learning.sortingalgo.SortingAlgo;
+import com.dsa.learning.sortingalgo.Util;
 
 public class BubbleSortTest {
 

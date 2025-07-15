@@ -1,4 +1,4 @@
-package com.dsa.learning.sorting;
+package com.dsa.learning.sortingalgo;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

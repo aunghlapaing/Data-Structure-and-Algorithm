@@ -1,4 +1,4 @@
-package com.dsa.learning.sorting;
+package com.dsa.learning.sortingalgo;
 
 public class MergeSort {
 
